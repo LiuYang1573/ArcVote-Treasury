@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcVote Treasury</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.0/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ArcVote Treasury</h1>
+            <p>DAO Governance-driven USDC Treasury on Arc</p>
+            <button id="connectBtn">Connect Wallet</button>
+            <p id="walletAddress"></p>
+            <p id="treasuryBalance">Treasury: -- USDC</p>
+        </header>
+
+        <section class="card">
+            <h2>Create Funding Proposal</h2>
+            <input type="text" id="recipient" placeholder="Recipient address (0x...)">
+            <input type="number" id="amount" placeholder="Amount (USDC, e.g. 10)">
+            <input type="text" id="description" placeholder="Description">
+            <button id="createBtn">Create Proposal</button>
+        </section>
+
+        <section class="card">
+            <h2>Proposals</h2>
+            <div id="proposalsList">Loading...</div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
